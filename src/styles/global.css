@@ -1,0 +1,10 @@
+html, body {
+    overscroll-behavior: none;
+    color: #FFF;
+    font-weight: 400;
+    background: #111322;
+}
+
+p {
+    font-weight: 200;
+}

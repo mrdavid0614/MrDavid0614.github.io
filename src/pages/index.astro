@@ -1,0 +1,105 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import RightProjectShowcase from '../components/RightProjectShowcase.astro';
+import LeftProjectShowcase from '../components/LeftProjectShowcase.astro';
+import Testimonial from '../components/Testimonial.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<Header />
+		<main class="grow flex flex-col">
+			<section class="py-[32px] lg:py-[60px]">
+				<h2 class="text-xl lg:text-4xl text-[#FFF] text-center mb-[24px] lg:mb-[32px] px-[20px]">Proyectos en los que he trabajado recientemente</h2>
+				<p class="text-sm lg:text-base text-[#FFF] font-thin max-w-[600px] text-center mx-auto mb-[32px] lg:mb-[60px] px-[20px]">
+					Debajo encontrarás proyectos en los que yo como <b class="text-lg">Fullstack Developer</b> especializado en el <b class="text-lg">Frontend</b>
+					he participado, demostrando mi experiencia profesional en diferentes áreas del software.
+				</p>
+				<div class="flex flex-col gap-[32px] lg:gap-[60px]">
+					<RightProjectShowcase
+						imgSrc="/images/billetShotTransparent.png"
+						imgAlt="Billet app"
+						href="https://billet.do/"
+					>
+						<a href="https://billet.do/" target="_blank" class="flex flex-col items-center text-center mb-[16px]">
+							<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
+								<span>Billet</span>
+							</h3>
+						</a>
+						<section class="grid gap-5">
+							<p class="text-[#FFF] font-thin inline mx-auto w-full px-[32px] text-center">
+								Billet es una cuenta de pago electrónico (EPE) que permite a las personas realizar pagos y transacciones financieras desde su teléfono móvil.
+							</p>
+							<p class="text-[#FFF] font-thin inline mx-auto w-full px-[32px] text-center">
+								Es un medio de pago electrónico con el que, además de transferir dinero en tiempo real y recargar en minutos, puedes pagar el delivery, transporte, servicios y suscribirte a tus apps favoritas.
+							</p>
+							<section class="mx-10 flex items-center gap-5">
+								<a href="https://play.google.com/store/apps/details?id=do.com.cashamrd" target="_blank">
+									<Image src="/images/downloadFromGoogle.png" alt="Download from play store" width="270" height="100" />
+								</a>
+								<a href="https://apps.apple.com/do/app/billet/id1575833087?l=en-GB" target="_blank">
+									<Image src="/images/downloadFromAppStore.svg" alt="Download from app store" width="270" height="90" />
+								</a>
+							</section>
+						</section>
+					</RightProjectShowcase>
+
+					<LeftProjectShowcase
+						imgSrc="/images/zamiWeb.webp"
+						imgAlt="ZamiApp homepage"
+						href="https://www.zamiapp.com/"
+						imgLoading="lazy"
+					>
+						<a href="https://www.zamiapp.com/" target="_blank" class="flex flex-col items-center text-center mb-[16px]">
+							<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
+								<span>Zami</span>
+								<span class="font-thin">App</span>
+							</h3>
+						</a>
+						<p class="text-[#FFF] font-thin inline mx-auto w-full px-[32px] text-center">
+							Zami es una central de comunicaciones por chat donde los negocios pueden gestionar todas sus cuentas de WhatsApp, Instagram y Messenger con todo su equipo.
+						</p>
+						<a href="https://www.zamiapp.com/" target="_blank" class="mt-3">Ir a Zami</a>
+					</LeftProjectShowcase>
+
+					<RightProjectShowcase
+						imgSrc="/images/apapShot.png"
+						imgAlt="Empresas APAP homepage"
+						href="https://apap.com.do/"
+						imgLoading="lazy"
+					>
+						<a href="https://apap.com.do/" target="_blank" class="flex flex-col items-center text-center mb-[16px]">
+							<h3 class="text-[#FFF] flex text-xl lg:text-3xl gap-1">
+								<span class="font-thin">Empresas</span>
+								<span>APAP</span>
+							</h3>
+						</a>
+						<p class="text-[#FFF] font-thin inline mx-auto w-full px-[32px] text-center">
+							Móvil Empresas APAP es una aplicación móvil que ofrece soluciones digitales para empresas y PYMES. La aplicación permite a los clientes realizar operaciones financieras de manera rápida, fácil y segura.
+						</p>
+						<section class="mx-10 mt-5 flex items-center gap-5">
+							<a href="https://play.google.com/store/apps/details?id=com.apap.empresas" target="_blank">
+								<Image src="/images/downloadFromGoogle.png" alt="Download from play store" width="270" height="100" />
+							</a>
+							<a href="https://apps.apple.com/do/app/empresas/id1660586933" target="_blank">
+								<Image src="/images/downloadFromAppStore.svg" alt="Download from app store" width="270" height="90" />
+							</a>
+						</section>
+					</RightProjectShowcase>
+
+					
+				</div>
+
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
