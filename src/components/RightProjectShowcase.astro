@@ -6,7 +6,7 @@ const { isWeb, imgSrc, imgAlt, href, imgLoading="eager" } = Astro.props;
 ---
 
 <div class="grow grid grid-cols-3 w-full">
-    <div class="p-[20px] lg:p-[32px] rounded-l-full bg-[#FFF] col-span-3 lg:col-span-2 md:order-last">
+    <div class="p-[20px] lg:p-[32px] rounded-l-full bg-[#FFF] col-span-3 lg:col-span-2 lg:order-last">
         { isWeb
             ? <WebShowcase imgSrc={imgSrc} imgAlt={imgAlt} href={href} imgLoading={imgLoading} />
             : <Image width="875" height="547" src={imgSrc} alt={imgAlt} loading={imgLoading} />
