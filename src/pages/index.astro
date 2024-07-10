@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import RightProjectShowcase from '../components/RightProjectShowcase.astro';
 import LeftProjectShowcase from '../components/LeftProjectShowcase.astro';
 import Testimonial from '../components/Testimonial.astro';
+import ButtonLink from '../components/ButtonLink.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Image } from 'astro:assets';
 ---
@@ -64,10 +65,12 @@ import { Image } from 'astro:assets';
 								<span class="font-thin">App</span>
 							</h3>
 						</a>
-						<p class="text-[#FFF] font-thin inline mx-auto w-full px-[32px] text-center">
+						<p class="text-[#FFF] font-thin inline mx-auto w-full px-[32px] text-center mb-[32px]">
 							Zami es una central de comunicaciones por chat donde los negocios pueden gestionar todas sus cuentas de WhatsApp, Instagram y Messenger con todo su equipo.
 						</p>
-						<a href="https://www.zamiapp.com/" target="_blank" class="mt-3">Ir a Zami</a>
+						<ButtonLink href="https://www.zamiapp.com/">
+							Ir a Zami
+						</ButtonLink>
 					</LeftProjectShowcase>
 
 					<RightProjectShowcase
