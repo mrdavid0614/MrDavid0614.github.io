@@ -5,7 +5,7 @@ interface Props {
 
 const { href } = Astro.props;
 ---
-<a href={href} class="button-link">
+<a href={href} target="_blank" class="button-link">
     <img width="20" height="20" src="/icons/link.svg" alt="">
     <slot></slot>
 </a>
